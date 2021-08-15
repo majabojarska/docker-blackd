@@ -1,13 +1,13 @@
 # Docker Black Daemon
 
 <p align="left">
-    <a href="https://hub.docker.com/repository/docker/majabojarska/blackd">
+    <a href="https://hub.docker.com/r/majabojarska/blackd">
         <img alt="Docker Image Version (tag latest semver)" src="https://img.shields.io/docker/v/majabojarska/blackd/latest">
     </a>
-    <a href="https://hub.docker.com/repository/docker/majabojarska/blackd">
+    <a href="https://hub.docker.com/r/majabojarska/blackd">
         <img alt="Docker Image Size (tag)" src="https://img.shields.io/docker/image-size/majabojarska/blackd/latest">
     </a>
-    <a href="https://hub.docker.com/repository/docker/majabojarska/blackd">
+    <a href="https://hub.docker.com/r/majabojarska/blackd">
         <img alt="Docker Automated build" src="https://img.shields.io/docker/automated/majabojarska/blackd">
     </a>
 </p>
