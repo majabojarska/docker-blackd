@@ -14,7 +14,7 @@
 
 [Black](https://github.com/psf/black) formatter HTTP server daemon in a Docker container. 
 
-Comes preinstalled with additional `python2` and `uvloop` extras by default. Provides support for Python 2 and 3. Runs on [uvloop](https://github.com/MagicStack/uvloop), the blazing fast replacement of the [asyncio](https://docs.python.org/3/library/asyncio.html) event loop. 
+Comes preinstalled with additional `python2` and `uvloop` extras by default. Provides support for Python 2 and 3. Runs on [uvloop](https://github.com/MagicStack/uvloop), the blazing fast replacement for the [asyncio](https://docs.python.org/3/library/asyncio.html) event loop. 
 
 ## Quick Start
 
