@@ -21,7 +21,7 @@ Comes preinstalled with additional `python2` and `uvloop` extras by default. Pro
 Run the latest image as a daemon, bind port `45484` from host to container.
 
 ```bash
-docker run -d -p 45484:45484 majabojarska/blackd:latest
+docker run -d --restart unless-stopped -p 45484:45484 majabojarska/blackd:latest
 ```
 
 ## Building the image
@@ -43,7 +43,7 @@ Run `docker build` from the project's root directory.
 ```bash
 docker build \
     --build-arg BLACK_VERSION=<VERSION> \
-    [--build-arg BLACK_EXTRAS=<EXTRAS>] \
+    [--build-arg BLACK_EXTRAS=<Extras delimited by ,>] \
     [--build-arg BLACKD_PORT=<PORT>] \
     [--build-arg MAINTAINER=<MAINTAINER>] \
     [--build-arg NAME=<NAME>] \
@@ -58,7 +58,7 @@ Multiplatform, non-native builds can be created via [qemu](https://github.com/qe
 docker buildx build --push \
     --platform linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/ppc64le,linux/s390x \
     --build-arg BLACK_VERSION=<VERSION> \
-    [--build-arg BLACK_EXTRAS=<EXTRAS>] \
+    [--build-arg BLACK_EXTRAS=<Extras delimited by ,>] \
     [--build-arg BLACKD_PORT=<PORT>] \
     [--build-arg MAINTAINER=<MAINTAINER>] \
     [--build-arg NAME=<NAME>] \
