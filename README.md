@@ -32,7 +32,6 @@ docker run -d --restart unless-stopped -p 45484:45484 majabojarska/blackd:latest
 | --------------- | ---------------- | ------------------------- | ----------------------------------------------------------------------------------------- |
 | `BLACK_VERSION` | unset            | `<VERSION>`               | Black version to install in the target Docker image.                                      |
 | `BLACK_EXTRAS`  | `python2,uvloop` | `<Extras delimited by ,>` | Additional black extas to install. The daemon extra (`d`) is always installed by default. |
-| `BLACKD_PORT`   | `45484`          | `<PORT>`                  | TCP port number for blackd                                                                |
 | `MAINTAINER`    | unset            | `<MAINTAINER>`            | Maintainer name                                                                           |
 | `NAME`          | unset            | `<NAME>`                  | Image name                                                                                |
 
@@ -44,7 +43,6 @@ Run `docker build` from the project's root directory.
 docker build \
     --build-arg BLACK_VERSION=<VERSION> \
     [--build-arg BLACK_EXTRAS=<Extras delimited by ,>] \
-    [--build-arg BLACKD_PORT=<PORT>] \
     [--build-arg MAINTAINER=<MAINTAINER>] \
     [--build-arg NAME=<NAME>] \
     --tag <TAG> .
@@ -56,10 +54,9 @@ Multiplatform, non-native builds can be created via [qemu](https://github.com/qe
 
 ```bash
 docker buildx build --push \
-    --platform linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64,linux/ppc64le,linux/s390x \
+    --platform linux/386,linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64 \
     --build-arg BLACK_VERSION=<VERSION> \
     [--build-arg BLACK_EXTRAS=<Extras delimited by ,>] \
-    [--build-arg BLACKD_PORT=<PORT>] \
     [--build-arg MAINTAINER=<MAINTAINER>] \
     [--build-arg NAME=<NAME>] \
     --tag <TAG> .
