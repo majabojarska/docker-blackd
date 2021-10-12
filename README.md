@@ -12,9 +12,9 @@
     </a>
 </p>
 
-[Black](https://github.com/psf/black) formatter HTTP server daemon in a Docker container. 
+[Black](https://github.com/psf/black) formatter HTTP server daemon in a Docker container.
 
-Comes preinstalled with additional `python2` and `uvloop` extras by default. Provides support for Python 2 and 3. Runs on [uvloop](https://github.com/MagicStack/uvloop), the blazing fast replacement for the [asyncio](https://docs.python.org/3/library/asyncio.html) event loop. 
+Comes preinstalled with additional `python2` and `uvloop` extras by default. Provides support for Python 2 and 3. Runs on [uvloop](https://github.com/MagicStack/uvloop), the blazing fast replacement for the [asyncio](https://docs.python.org/3/library/asyncio.html) event loop.
 
 ## Quick Start
 
@@ -28,14 +28,14 @@ docker run -d --restart unless-stopped -p 45484:45484 majabojarska/blackd:latest
 
 ### Docker Build Arguments
 
-| Argument        | Default          | Value                     | Description                                                                               |
-| --------------- | ---------------- | ------------------------- | ----------------------------------------------------------------------------------------- |
-| `BLACK_VERSION` | unset            | `<VERSION>`               | Black version to install in the target Docker image.                                      |
-| `BLACK_EXTRAS`  | `python2,uvloop` | `<Extras delimited by ,>` | Additional black extas to install. The daemon extra (`d`) is always installed by default. |
-| `MAINTAINER`    | unset            | `<MAINTAINER>`            | Maintainer name                                                                           |
-| `NAME`          | unset            | `<NAME>`                  | Image name                                                                                |
+| Argument        | Default          | Value                     | Description                                                                                |
+| --------------- | ---------------- | ------------------------- | ------------------------------------------------------------------------------------------ |
+| `BLACK_VERSION` | unset            | `<VERSION>`               | Black version to install in the target Docker image.                                       |
+| `BLACK_EXTRAS`  | `python2,uvloop` | `<Extras delimited by ,>` | Additional Black extras to install. The daemon extra (`d`) is always installed by default. |
+| `MAINTAINER`    | unset            | `<MAINTAINER>`            | Maintainer name                                                                            |
+| `NAME`          | unset            | `<NAME>`                  | Image name                                                                                 |
 
-### Build for local platform 
+### Build for local platform
 
 Run `docker build` from the project's root directory.
 
@@ -61,4 +61,3 @@ docker buildx build --push \
     [--build-arg NAME=<NAME>] \
     --tag <TAG> .
 ```
-
